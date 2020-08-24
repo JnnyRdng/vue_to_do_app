@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 const todo = { name: this.newTodo, priority: this.priority, complete: false };
                 this.todos.push(todo);
                 this.newTodo = "";
+            },
+            markComplete: function (index) {
+                this.todos[index].complete = !this.todos[index].complete;
             }
         }
     });
