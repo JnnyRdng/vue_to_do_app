@@ -106,7 +106,7 @@ li>span {
 
 .complete {
     text-decoration: line-through;
-    /* opacity: 0.6; */
+    opacity: 0.3;
 }
 
 form {
@@ -120,14 +120,17 @@ form>* {
 
 form>div>input[type=text] {
     width: 100%;
+    box-sizing: border-box;
     margin: 0px'
 
 }
 
 form>input[type=button] {
     padding: 10px;
+    cursor: pointer;
 }
 
 form>input[type=submit] {
     padding: 14px;
+    cursor: pointer;
 }
