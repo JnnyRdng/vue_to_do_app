@@ -39,6 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             deleteAll: function () {
                 this.todos = [];
+            },
+            deleteCompleted: function () {
+                const notComplete = this.todos.filter((todo) => !todo.complete);
+                this.todos = notComplete;
             }
         }
     });

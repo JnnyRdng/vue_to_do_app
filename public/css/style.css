@@ -123,3 +123,11 @@ form>div>input[type=text] {
     margin: 0px'
 
 }
+
+form>input[type=button] {
+    padding: 10px;
+}
+
+form>input[type=submit] {
+    padding: 14px;
+}
