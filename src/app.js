@@ -1,26 +1,27 @@
 import Vue from "vue";
+const ToDo = require("./models/todo.js");
 
 document.addEventListener("DOMContentLoaded", () => {
     new Vue({
         el: "#app",
         data: {
             todos: [
-                { name: "Do some coding", priority: "high", complete: true },
-                { name: "Drink coffee", priority: "high", complete: false },
-                { name: "Don't forget to eat", priority: "low", complete: false }
+                new ToDo("Do some coding", "high", true),
+                new ToDo("Drink coffee", "high"),
+                new ToDo("Don't forget to eat", "low"),
+                new ToDo("Don't forget to sleep", "low")
             ],
             newTodo: "",
             priority: "high"
         },
         methods: {
             addTodo: function () {
-                const todo = { name: this.newTodo, priority: this.priority, complete: false };
+                const todo = new ToDo(this.newTodo, this.priority);
                 this.todos.push(todo);
                 this.newTodo = "";
-
             },
             markComplete: function (index) {
-                this.todos[index].complete = !this.todos[index].complete;
+                this.todos[index].toggleComplete();
             },
             deleteItem: function (index) {
                 this.todos.splice(index, 1);
