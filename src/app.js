@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         methods: {
             addTodo: function () {
-                const todo = new ToDo(this.newTodo, this.priority);
-                this.todos.push(todo);
+                this.todos.push(new ToDo(this.newTodo, this.priority));
                 this.newTodo = "";
             },
             markComplete: function (index) {
@@ -33,8 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 this.todos = [];
             },
             deleteCompleted: function () {
-                const notComplete = this.todos.filter((todo) => !todo.complete);
-                this.todos = notComplete;
+                this.todos = this.todos.filter(todo => !todo.complete);
             }
         }
     });
