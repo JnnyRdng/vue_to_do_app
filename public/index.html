@@ -17,6 +17,7 @@
         <span :class="(todo.complete) ? 'complete' : 'outstanding'">{{todo.name}}</span>
         <span class="caps">{{todo.priority}}</span>
         <button v-on:click="markComplete(index)">Complete?</button>
+        <button v-on:click="deleteItem(index)">Delete</button>
       </li>
     </ul>
     <form v-on:submit.prevent="addTodo">

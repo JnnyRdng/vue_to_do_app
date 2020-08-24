@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             markComplete: function (index) {
                 this.todos[index].complete = !this.todos[index].complete;
+            },
+            deleteItem: function (index) {
+                this.todos.splice(index, 1);
             }
         }
     });
