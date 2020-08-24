@@ -1,0 +1,15 @@
+.high {
+    border: 1px solid red;
+}
+
+.low {
+    border: 1px solid green;
+}
+
+.caps {
+    text-transform: capitalize;
+}
+
+.complete {
+    text-decoration: line-through;
+}
