@@ -1,11 +1,33 @@
 body {
     font-family: "Montserrat", sans-serif;
+    background-color: oldlace;
+}
+
+main {
+    width: 600px;
+    height: 600px;
+    margin: 30px;
     background-color: #FFFF99;
+    /* border: 1px solid black; */
+    transform: rotate(-2deg);
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+    -webkit-backface-visibility: hidden;
+}
+
+main>header {
+    background-color: rgba(204, 204, 123, 0.2);
+    height: 80px
+}
+
+main>article {
+    overflow-y: auto;
+    height: calc(100% - 80px);
 }
 
 h1 {
     transform: rotate(-2deg);
-    margin: 20px;
+    margin: 50px 50px;
+    padding: 10px;
     font-family: "Permanent Marker", cursive
 }
 
@@ -46,6 +68,10 @@ li {
     border-radius: 10px;
 }
 
+li:after {
+    transform: rotate(10deg);
+}
+
 li>span {
     align-self: center
 }
@@ -64,5 +90,5 @@ li>span {
 
 .complete {
     text-decoration: line-through;
-    opacity: 0.3;
+    opacity: 0.6;
 }
