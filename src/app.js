@@ -36,6 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         return 0;
                     }
                 });
+            },
+            deleteAll: function () {
+                this.todos = [];
             }
         }
     });
