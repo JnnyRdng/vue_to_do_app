@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Do</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/bundle.js"></script>
 </head>
@@ -15,9 +17,8 @@
     <ul>
       <li v-for="(todo, index) in todos" v-bind:class="todo.priority">
         <span :class="(todo.complete) ? 'complete' : 'outstanding'">{{todo.name}}</span>
-        <span class="caps">{{todo.priority}}</span>
-        <button v-on:click="markComplete(index)">Complete?</button>
-        <button v-on:click="deleteItem(index)">Delete</button>
+        <button v-on:click="markComplete(index)">{{todo.complete ? "Mark done" : "Mark not done"}}</button>
+        <button v-on:click="deleteItem(index)" class="delete">Delete</button>
       </li>
     </ul>
     <form v-on:submit.prevent="addTodo">

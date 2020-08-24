@@ -1,9 +1,61 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #FFFF99;
+}
+
+h1 {
+    transform: rotate(-2deg);
+    margin: 20px;
+    font-family: "Permanent Marker", cursive
+}
+
+input {
+    font-family: "Montserrat", sans-serif;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: #EB0000;
+    color: white;
+    border: none;
+}
+
+.delete:hover {
+    background-color: #EB7500;
+}
+
+ul {
+    padding: 0px;
+    margin: 10px;
+}
+
+li {
+    font-family: "Permanent Marker", cursive;
+    display: grid;
+    min-height: 50px;
+    grid-template-columns: 4fr 1fr 1fr;
+    align-items: stretch;
+    gap: 20px;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid;
+    border-radius: 10px;
+}
+
+li>span {
+    align-self: center
+}
+
 .high {
-    border: 1px solid red;
+    border-color: red;
 }
 
 .low {
-    border: 1px solid green;
+    border-color: green;
 }
 
 .caps {
