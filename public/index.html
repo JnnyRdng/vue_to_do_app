@@ -10,6 +10,12 @@
 
 <body>
   <div id="app">
+    <h1>{{todos.length}} ToDos to do today</h1>
+    <ul>
+      <li v-for="todo in todos">
+        {{todo}}
+      </li>
+    </ul>
   </div>
 </body>
 

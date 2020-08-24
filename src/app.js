@@ -2,6 +2,9 @@ import Vue from "vue";
 
 document.addEventListener("DOMContentLoaded", () => {
     new Vue({
-        el: "#app"
+        el: "#app",
+        data: {
+            todos: ["Learn Vue", "Write Vue", "Master Vue"]
+        }
     });
 });
