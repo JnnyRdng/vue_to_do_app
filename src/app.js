@@ -27,15 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 this.todos.splice(index, 1);
             },
             sortItemsByPriority: function (todos) {
-                return todos.sort((a, b) => {
-                    if (a.priority > b.priority) {
-                        return 1;
-                    } else if (a.priority < b.priority) {
-                        return -1;
-                    } else {
-                        return 0;
-                    }
-                });
+                return todos.sort((a, b) => (a.priority >= b.priority) ? 1 : -1);
             },
             deleteAll: function () {
                 this.todos = [];
