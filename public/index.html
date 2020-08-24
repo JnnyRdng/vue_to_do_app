@@ -16,6 +16,12 @@
         {{todo}}
       </li>
     </ul>
+    <form v-on:submit.prevent="addTodo">
+      <label for="new-todo">Enter todo:</label>
+      <input type="text" id="new-todo" v-model="newTodo" />
+      <input type="submit" value="Add To Do" />
+
+    </form>
   </div>
 </body>
 
