@@ -11,13 +11,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 new ToDo("Don't forget to eat", "low"),
                 new ToDo("Don't forget to sleep", "low")
             ],
-            newTodo: "",
-            priority: "high"
+            newTodo: {
+                name: "",
+                priority: "high"
+            }
         },
         methods: {
             addTodo: function () {
-                this.todos.push(new ToDo(this.newTodo, this.priority));
-                this.newTodo = "";
+                this.todos.push(new ToDo(this.newTodo.name, this.newTodo.priority));
+                this.todos = this.sortItemsByPriority(this.todos);
+                this.newTodo.name = "";
             },
             markComplete: function (index) {
                 this.todos[index].toggleComplete();

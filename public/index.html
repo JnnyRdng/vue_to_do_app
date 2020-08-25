@@ -20,7 +20,7 @@
       </header>
       <article>
         <ul>
-          <li v-for="(todo, index) in sortItemsByPriority(todos)" v-bind:class="todo.priority">
+          <li v-for="(todo, index) in todos" v-bind:class="todo.priority">
             <span :class="(todo.complete) ? 'complete' : 'outstanding'">{{todo.name}}</span>
             <button v-on:click="markComplete(index)">{{todo.complete ? "Mark not done" : "Mark done"}}</button>
             <button v-on:click="deleteItem(index)" class="delete">Delete</button>
@@ -31,13 +31,13 @@
     <form v-on:submit.prevent="addTodo">
       <div>
         <label for="new-todo">Enter new to do item:</label>
-        <input type="text" id="new-todo" v-model="newTodo" required />
+        <input type="text" id="new-todo" v-model="newTodo.name" required />
       </div>
       <div>
-        <input type="radio" name="priority" id="high" value="high" v-model="priority" checked />
+        <input type="radio" name="priority" id="high" value="high" v-model="newTodo.priority" checked />
         <label for="high">High Priority</label>
 
-        <input type="radio" name="priority" id="low" value="low" v-model="priority" />
+        <input type="radio" name="priority" id="low" value="low" v-model="newTodo.priority" />
         <label for="low">Low Priority</label>
       </div>
 
